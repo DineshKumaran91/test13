@@ -3,10 +3,10 @@ pipeline{
     stages {
         stage('Build Tags') {
             when {
-                changeRequest()
+                changeset glob: "*.js"
             }
             steps{
-                echo "Change request executed"
+                echo "Change Set executed"
             }
         }
     }
